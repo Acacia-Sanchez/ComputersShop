@@ -58,7 +58,7 @@ public class CompService {
                 // Listar ordenadores 
                 break; 
             case 3: 
-                // Buscar ordenador por marca 
+                // Buscar ordenador por marca
                 break; 
             case 4: 
                 // Eliminar ordenador por marca 
