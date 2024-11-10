@@ -17,7 +17,7 @@ public class Computers {
     private Long id;
 
     @Column(nullable = false)
-    private String marca;
+    private String trade;
 
     @Column(nullable = false)
     private int ram;
@@ -31,15 +31,15 @@ public class Computers {
     @Column(nullable = false)
     private int price;
 
-    // RELACION DE FK CON TIENDA
+    // RELACION DE FK CON SHOP
     @ManyToOne
     @JoinColumn(name = "shop_id", nullable = false)
-    private Shop shop;
+    private Shops shop;
 
     // CONSTRUCTOR CON PARAMETROS
-    public Computers(Long id, String marca, int ram, String micro, String os, int price) {
+    public Computers(Long id, String trade, int ram, String micro, String os, int price) {
         this.id = id;
-        this.marca = marca;
+        this.trade = trade;
         this.ram = ram;
         this.micro = micro;
         this.os = os;
@@ -59,12 +59,12 @@ public class Computers {
         this.id = id;
     }
 
-    public String getMarca() {
-        return marca;
+    public String getTrade() {
+        return trade;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setTrade(String trade) {
+        this.trade = trade;
     }
 
     public int getRam() {

@@ -9,44 +9,44 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "shops")
-public class Shop {
+public class Shops {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String shopName;
 
     @Column(nullable = false)
-    private String owner;
+    private String ownerName;
 
     @Column(nullable = false)
     private String cif;
 
-    public Shop(String name, String owner, String cif) {
-        this.name = name;
-        this.owner = owner;
+    public Shops(String shopName, String ownerName, String cif) {
+        this.shopName = shopName;
+        this.ownerName = ownerName;
         this.cif = cif;
     }
 
-    public Shop() {
+    public Shops() {
     }
 
-    public String getName() {
-        return name;
+    public String getShopName() {
+        return shopName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
     }
 
-    public String getOwner() {
-        return owner;
+    public String getOwnerName() {
+        return ownerName;
     }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
     }
 
     public String getCif() {
