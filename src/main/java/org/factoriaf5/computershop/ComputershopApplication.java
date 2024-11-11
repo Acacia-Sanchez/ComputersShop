@@ -52,7 +52,7 @@ public class ComputershopApplication implements CommandLineRunner {
     public void methodDependsOnChoosenMenu(short choosenMenuOption) {
         switch (choosenMenuOption) {
             case 1: // OJO PEDIR ESOS DATOS POR CONSOLA !! ------------------------
-                System.out.println("1. Añadir ordenador ");
+                System.out.println(color1 + "Añadir ordenador " + reset);
                 Computers newComputer = new Computers();
                 newComputer.setTrade("Lenovo");
                 newComputer.setMicro("i7 quad core 6300 Ghz");
@@ -61,7 +61,7 @@ public class ComputershopApplication implements CommandLineRunner {
                 newComputer.setPrice(2_000);
                 compService.addOne(newComputer);
                 break;
-            case 2:
+            case 2:  // OJO PONER MENSAJE SI NO HAY NADA PARA LISTAR ?? ---------------
                 System.out.println(color1 + "Listado de ordenadores");
                 List<Computers> computers = compService.getAll(); // es el READ getter
                 for (Computers computer : computers) {
@@ -75,9 +75,12 @@ public class ComputershopApplication implements CommandLineRunner {
                 }
                 break;
             case 3: // OJO PEDIR LA MARCA POR CONSOLA !! ------------------------
-                System.out.println("3. Buscar ordenador por marca");
+                System.out.println(color1 + "Buscar ordenador por marca");
                 String tradeToFind = "Lenovo";
                 List<Computers> computersFounded = compService.findOneByTrade(tradeToFind);
+                System.out.println();
+                System.out.println(color2 + "Marca a buscar : " + color1 + tradeToFind);
+                System.out.println();
                 for (Computers computer : computersFounded) {
                     System.out.println();
                     System.out.println(color3 + "Id Nº : " + computer.getId() + reset);
@@ -89,10 +92,11 @@ public class ComputershopApplication implements CommandLineRunner {
                 }
                 break;
             case 4: // OJO PEDIR LA MARCA POR CONSOLA !! ------------------------
-                System.out.println("4. Eliminar ordenador por marca");
+                System.out.println(color1 + "Eliminar ordenador por marca");
                 String tradeToDelete = "Lenovo";
                 compService.deleteOneByTrade(tradeToDelete);
-                System.out.println("Ordenadores con marca " + tradeToDelete + " eliminados");
+                System.out.println();
+                System.out.println(color2 + "Ordenadores con marca " + color1 + tradeToDelete + color2 + " eliminados");
                 break;
             case 5:
                 System.out.println(color4 + "5. Saliendo del programa... ¡ Hasta pronto !" + reset);
