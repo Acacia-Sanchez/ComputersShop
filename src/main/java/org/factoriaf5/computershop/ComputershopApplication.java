@@ -25,7 +25,7 @@ public class ComputershopApplication implements CommandLineRunner {
     String color10 = "\033[38;5;206;48;5;57m";
     String reset = "\033[0m"; // blanco
 
-    private boolean loopMenu = true;
+    boolean loopMenu = true;
 
     @Autowired // instancia automática de CompService (inyección dependencias)
     private CompService compService;
@@ -113,5 +113,7 @@ public class ComputershopApplication implements CommandLineRunner {
                 }
         }
     }
-
+    public boolean isLoopMenu() {
+        return loopMenu;
+    }
 }
