@@ -46,32 +46,12 @@ public class CompService {
         return choosenMenuOption;
     }
 
-    // Llamar a otros métodos según la opción seleccionada
-    public void methodDependsOnChoosenMenu() {
-        // short option = showMenu();
+    
 
-        switch (showMenu()) { 
-            case 1: 
-                // Añadir ordenador 
-                break; 
-            case 2: 
-                // Listar ordenadores 
-                break; 
-            case 3: 
-                // Buscar ordenador por marca
-                break; 
-            case 4: 
-                // Eliminar ordenador por marca 
-                break; 
-            case 5: 
-                // Salir del programa 
-                break; 
-            default: 
-                System.out.println("Opción no válida. Elije entre 1 y 5"); 
-                showMenu();
-        }
 
-    }
+
+
+    
     public void closeConsoleScanner() {
         console.close();
     }
