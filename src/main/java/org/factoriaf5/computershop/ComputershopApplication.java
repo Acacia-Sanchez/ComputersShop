@@ -26,7 +26,7 @@ public class ComputerShopApplication implements CommandLineRunner {
 
 	}
 
-/*     @Override
+    @Override
     public void run(String... args) {
 
         // Muestra el menú y obtiene la elección del usuario
@@ -39,7 +39,7 @@ public class ComputerShopApplication implements CommandLineRunner {
         // compService.closeConsoleScanner();
     } */
 
-/*     public void methodDependsOnChoosenMenu(short choosenMenuOption) {
+    public void methodDependsOnChoosenMenu(short choosenMenuOption) {
         // short option = compService.showMenu();
 		System.out.println("entra aquí??, opcion a ejecutar " + choosenMenuOption);
         switch (choosenMenuOption) { 
@@ -66,6 +66,6 @@ public class ComputerShopApplication implements CommandLineRunner {
         }
 		System.out.println("estoy fuera del switch");
 
-    } */
+    }
 
 }
