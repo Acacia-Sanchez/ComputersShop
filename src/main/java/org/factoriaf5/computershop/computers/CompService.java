@@ -26,10 +26,7 @@ public class CompService {
         this.compRepository = compRepository;
     }
 
-    public List<Computers> getAll() {
-        return compRepository.findAll();
-    }
-
+    
     public short showMenu() {
         System.out.println("\n");
         System.out.println(color1 + "     ==========================" + color7);
@@ -45,13 +42,29 @@ public class CompService {
         System.out.println(reset + "");
         return choosenMenuOption;
     }
-
     
+        // opción 1. AÑADIR ORDENADOR
+    public Computers addOne(Computers computers) {
+        return compRepository.save(computers);
+    }
+        // opción 2. LISTAR ORDENADORES
+    public List<Computers> getAll() {
+        return compRepository.findAll();
+    }
+        // opción 3. BUSCAR ORDENADOR POR MARCA
+    public List<Computers> findOneByTrade(String trade) {
+        return compRepository.findByTrade(trade);
+    }
+        // opción 4. ELIMINAR ORDENADOR POR MARCA
+    public void deleteOneByTrade(String trade) {
+        compRepository.deleteByTrade(trade);
+    }
+        // opción 
+    public void deleteOneById(Long id) {
+        compRepository.deleteById(id);
+    }
 
 
-
-
-    
     public void closeConsoleScanner() {
         console.close();
     }

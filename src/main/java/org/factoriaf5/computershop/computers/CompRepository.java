@@ -11,6 +11,7 @@ public interface CompRepository extends JpaRepository<Computers, Long> {
     void deleteByTrade(String trade);
 
     List<Computers> findByTrade(String trade);
+
 }
 
 /*  @Transactional

@@ -32,9 +32,9 @@ public class Computers {
     private int price;
 
     // RELACION DE FK CON SHOP
-    @ManyToOne
+/*     @ManyToOne
     @JoinColumn(name = "shop_id", nullable = false)
-    private Shops shop;
+    private Shops shop; */
 
     // CONSTRUCTOR CON PARAMETROS
     public Computers(Long id, String trade, int ram, String micro, String os, int price) {
